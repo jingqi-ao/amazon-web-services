@@ -1,0 +1,13 @@
+{
+    "name": "aws-polly-server",
+    "version": "0.0.1",
+    "license": "MIT",
+    "dependencies": {
+        "express": "4.14.0",
+        "body-parser": "1.15.2 ",
+        "async": "2.0.0",
+        "fs-extra": "0.30.0",
+        "request": "2.74.0",
+        "aws-sdk": "2.7.19"
+    }
+}

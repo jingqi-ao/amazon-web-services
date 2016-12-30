@@ -1,0 +1,12 @@
+# temp file
+*~
+
+# sensitive files
+certs
+keys
+
+# node_modules
+node_modules
+
+# build
+docker/build
