@@ -2,8 +2,8 @@
 
 if [ -z "$DOCKER_IMAGE_FULL_NAME" ];
 then
-	DOCKER_IMAGE_FULL_NAME=aws-polly-server
-	echo "DOCKER_IMAGE_FULL_NAME is NOT set. Use default name: "$DOCKER_IMAGE_FULL_NAME
+    DOCKER_IMAGE_FULL_NAME=aws-polly-server
+    echo "DOCKER_IMAGE_FULL_NAME is NOT set. Use default name: "$DOCKER_IMAGE_FULL_NAME
 fi
 
 rm -rf ./build

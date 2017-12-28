@@ -13,7 +13,10 @@ Ref: http://docs.aws.amazon.com/general/latest/gr/managing-aws-access-keys.html
 
 _Note: AWS API credentials will be used as environment variables when running docker container_
 
-## How to run transcoding server
+## Language support
+See: https://docs.aws.amazon.com/polly/latest/dg/SupportedLanguage.html
+
+## How to run polly server
 AWS polly server is now running as docker container
 
 (1) Build docker image

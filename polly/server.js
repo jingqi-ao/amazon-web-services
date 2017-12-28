@@ -52,7 +52,7 @@ https.createServer(options, app).listen(port, function () {
 
 });
 
-
+/*
 function getLanguageCode(language) {
     var languageCodeMap = {
         "English US": "en-US",
@@ -68,7 +68,16 @@ function getLanguageCode(language) {
 
     return languageCode;
 }
+*/
 
+/*
+
+request: {
+    "inputString": "string to be transformed to voice"
+    "languageCode": "LANGUAGE_CODE_SUPPORTED_BY_POLLY"
+}
+
+*/
 app.post('/api/v1/polly', function(req, res) {
 
     console.log("/api/v1/polly: body");
@@ -80,16 +89,8 @@ app.post('/api/v1/polly', function(req, res) {
     }
     var inputString = req.body.inputString;
 
-    if(!req.body.language) {
-        res.status(400).send("req.body.language is NOT provided.");
-        return;
-    }
-    var language = req.body.language;    
-
-    var languageCode = getLanguageCode(language);
-
-    if(languageCode == null) {
-        res.status(403).send("Language=" + language + " is NOT supported.");
+    if(!req.body.languageCode) {
+        res.status(400).send("req.body.languageCode is NOT provided.");
         return;
     }
 
@@ -98,7 +99,7 @@ app.post('/api/v1/polly', function(req, res) {
         function(callback) {
             // Find all voices
             var params = {
-                LanguageCode: languageCode
+                LanguageCode: req.body.languageCode
             };
 
             console.log("test");
